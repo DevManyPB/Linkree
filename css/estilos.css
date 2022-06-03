@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(246, 244, 244);
+    font-family: 'Lucida Handwriting', cursive;
+}
+
+.caja {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Formato {
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 30px;
+    width: 400px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Formato .portada img {
+    margin-top: 15px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 100px;
+    object-fit: cover;
+    animation-name: portada;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.Formato .Title {
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(0, 60, 255, 0.5) ;
+    color: white;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 50px;
+    width: 250px;
+    height: 40px;
+    display: inline-block;
+}
+
+.Formato ul {
+    width: 70%;
+}
+
+.Formato li {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.red {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    border: 2px solid rgb(233, 233, 233);
+    border-radius: 50px;
+}
+
+.red a {
+    color: black;
+    text-decoration: none;
+    margin-left: 35px;
+    margin-top: 21px;
+    font-size: 20px;
+}
+
+.red a:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+.red img {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 60px;
+}
+
+footer {
+    width: 100%;
+    display: inline-block;
+    margin-top: 5px;
+    text-align: center;
+}
+
+footer p span {
+    animation-name: cambio;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@media (max-width: 600px) {
+    .Formato {
+        width: 300px;
+        height: 80vh;
+    }
+
+    .red a {
+        color: black;
+        text-decoration: none;
+        margin-left: 25px;
+        margin-top: 22px;
+        font-size: 15px;
+    }
+
+    footer {
+        margin-top: 50px;
+    }
+}
+
+
+@keyframes portada {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes cambio {
+    from {
+        color: black;
+    }
+
+    to{
+        color: rgba(0, 60, 255, 0.5);
+    }
+}
